@@ -1,5 +1,5 @@
 function load(){
-    // const tableDiv = document.getElementById('table-body');
+    const tableDiv = document.getElementById('table-body');
     // var table = document.getElementById('table-body');
 
 	// var rowCount = table.rows.length;
@@ -7,46 +7,46 @@ function load(){
     // const title= localStorage.getItem("title"), option1=localStorage.getItem("option1"), option2=localStorage.getItem("option2"),
     // option3=localStorage.getItem("option3"),option4=localStorage.getItem("option4"), correct=localStorage.getItem("correct");
     const data=JSON.parse(localStorage.getItem("obj"));
-    addtolist(data);
-    displayAll();
+    // addtolist(data);
+    // displayAll();
 
-    // const content = `<tr>
-    //   <td>${data.title}</td>
-    //   <td>${data.option1}</td>
-    //   <td>${data.option2}</td>
-    //   <td>${data.option3}</td>
-    //   <td>${data.option4}</td>
-    //   <td>${data.correct}</td>
-    //   <td><button class="btn btn-primary btn-sm" type="button" onClick="removeRow(this)">Remove</button></td>
-    // </tr>`;
-    
-    // tableDiv.innerHTML += content; 
-}
-
-list=[];
-function addtolist(data1){
-  list.push(data1);
-  
-
-}
-
-function displayAll(){
-  const tableDiv = document.getElementById('table-body');
-    for(let dat in list){
-      const content = `<tr>
-      <td>${dat.title}</td>
-      <td>${dat.option1}</td>
-      <td>${dat.option2}</td>
-      <td>${dat.option3}</td>
-      <td>${dat.option4}</td>
-      <td>${dat.correct}</td>
+    const content = `<tr>
+      <td>${data.title}</td>
+      <td>${data.option1}</td>
+      <td>${data.option2}</td>
+      <td>${data.option3}</td>
+      <td>${data.option4}</td>
+      <td>${data.correct}</td>
       <td><button class="btn btn-primary btn-sm" type="button" onClick="removeRow(this)">Remove</button></td>
     </tr>`;
     
     tableDiv.innerHTML += content; 
-
-    }
 }
+
+// list=[];
+// function addtolist(data1){
+//   list.push(data1);
+  
+
+// }
+
+// function displayAll(){
+//   const tableDiv = document.getElementById('table-body');
+//     for(let dat in list){
+//       const content = `<tr>
+//       <td>${dat.title}</td>
+//       <td>${dat.option1}</td>
+//       <td>${dat.option2}</td>
+//       <td>${dat.option3}</td>
+//       <td>${dat.option4}</td>
+//       <td>${dat.correct}</td>
+//       <td><button class="btn btn-primary btn-sm" type="button" onClick="removeRow(this)">Remove</button></td>
+//     </tr>`;
+    
+//     tableDiv.innerHTML += content; 
+
+//     }
+// }
 // function myFunction() {
 //     var table = document.getElementById("table-body");
 //     var row = table.insertRow(0);
